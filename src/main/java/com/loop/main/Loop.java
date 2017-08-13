@@ -28,7 +28,6 @@ public class Loop {
     
     private void start(){
         IteratorSamp iteSamp = new IteratorSamp();
-        iteSamp.IteratorSample1();
-        iteSamp.IteratorSample2();
+        iteSamp.action();
     }
 }
