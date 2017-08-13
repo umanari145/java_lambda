@@ -36,9 +36,10 @@ public class IteratorSamp {
         IteratorSample3();
         IteratorSample4();
         IteratorSample5();
+        IteratorSample6();
+        IteratorSample7();
     }
-    
-    
+
     /**
      * イテレーターのサンプル
      */
@@ -100,6 +101,26 @@ public class IteratorSamp {
                     }
                 }
         );
+    }
+
+    /**
+     * イテレーターのサンプル(ラムダ式)
+     */
+    public void IteratorSample6() {
+
+        fruits.forEach(
+                (String s) -> {
+                    System.out.println(s);
+                }
+        );
+    }
+    
+        /**
+     * イテレーターのサンプル(ラムダ式)
+     */
+    public void IteratorSample7() {
+
+        fruits.forEach(s -> System.out.println(s));
     }
 
 }
