@@ -7,6 +7,7 @@ package com.loop.main;
 
 import com.loop.lambda.IteratorIfSamp;
 import com.loop.lambda.IteratorLoopSamp;
+import com.loop.lambda.Practice;
 
 /**
  *
@@ -33,5 +34,9 @@ public class Loop {
         
         IteratorIfSamp iteIfSamp = new IteratorIfSamp();
         iteIfSamp.action();
+    
+        Practice practice = new Practice();
+        practice.action();
+    
     }
 }
