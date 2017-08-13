@@ -14,11 +14,11 @@ import java.util.function.Consumer;
  *
  * @author donow01
  */
-public class IteratorSamp {
+public class IteratorLoopSamp {
 
     private List<String> fruits;
 
-    public IteratorSamp() {
+    public IteratorLoopSamp() {
         fruits = new ArrayList<>();
 
         fruits.add("りんご");
@@ -43,7 +43,7 @@ public class IteratorSamp {
     /**
      * イテレーターのサンプル
      */
-    public void IteratorSample1() {
+    private void IteratorSample1() {
 
         Iterator<String> i = fruits.iterator();
         while (i.hasNext()) {
@@ -55,7 +55,7 @@ public class IteratorSamp {
     /**
      * イテレーターのサンプル(for文)
      */
-    public void IteratorSample2() {
+    private void IteratorSample2() {
 
         for (Iterator<String> i = fruits.iterator(); i.hasNext();) {
             String f = (String) i.next();
@@ -66,7 +66,7 @@ public class IteratorSamp {
     /**
      * イテレーターのサンプル(拡張for文)
      */
-    public void IteratorSample3() {
+    private void IteratorSample3() {
 
         for (String fruit : fruits) {
             System.out.println(fruit);
@@ -76,7 +76,7 @@ public class IteratorSamp {
     /**
      * イテレーターのサンプル(匿名クラス1)
      */
-    public void IteratorSample4() {
+    private void IteratorSample4() {
 
         Consumer<String> action = new Consumer<String>() {
             @Override
@@ -91,7 +91,7 @@ public class IteratorSamp {
     /**
      * イテレーターのサンプル(匿名クラス2)
      */
-    public void IteratorSample5() {
+    private void IteratorSample5() {
 
         fruits.forEach(
                 new Consumer<String>() {
@@ -106,7 +106,7 @@ public class IteratorSamp {
     /**
      * イテレーターのサンプル(ラムダ式)
      */
-    public void IteratorSample6() {
+    private void IteratorSample6() {
 
         fruits.forEach(
                 (String s) -> {
@@ -115,10 +115,10 @@ public class IteratorSamp {
         );
     }
     
-        /**
+    /**
      * イテレーターのサンプル(ラムダ式)
      */
-    public void IteratorSample7() {
+    private void IteratorSample7() {
 
         fruits.forEach(s -> System.out.println(s));
     }

@@ -5,7 +5,8 @@
  */
 package com.loop.main;
 
-import com.loop.lambda.IteratorSamp;
+import com.loop.lambda.IteratorIfSamp;
+import com.loop.lambda.IteratorLoopSamp;
 
 /**
  *
@@ -27,7 +28,10 @@ public class Loop {
     }
     
     private void start(){
-        IteratorSamp iteSamp = new IteratorSamp();
+        IteratorLoopSamp iteSamp = new IteratorLoopSamp();
         iteSamp.action();
+        
+        IteratorIfSamp iteIfSamp = new IteratorIfSamp();
+        iteIfSamp.action();
     }
 }
