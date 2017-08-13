@@ -21,19 +21,31 @@ public class IteratorSamp {
     
     public IteratorSamp() {
         fruits = new ArrayList<>();
+
+        fruits.add("りんご");
+        fruits.add("みかん");
+        fruits.add("キウイ");
+
     }
     
     /**
      * イテレーターのサンプル
      */
     public void IteratorSample1() {
-         
-        fruits.add("りんご");
-        fruits.add("みかん");
-        fruits.add("キウイ");
         
         Iterator<String> i = fruits.iterator();
         while(i.hasNext()){
+            String f = (String)i.next();
+            System.out.println(f);
+        }
+    }
+    
+    /**
+     * イテレーターのサンプル(for文)
+     */
+    public void IteratorSample2() {
+        
+        for(Iterator<String> i = fruits.iterator();i.hasNext();){
             String f = (String)i.next();
             System.out.println(f);
         }
