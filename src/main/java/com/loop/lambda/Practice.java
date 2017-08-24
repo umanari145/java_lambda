@@ -6,6 +6,8 @@
 package com.loop.lambda;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -120,6 +122,61 @@ public class Practice {
                     System.out.print(s.getName() + s.getAge());
                     System.out.println();
                 });
+    }
+    
+    /**
+     *  scopeについて
+     */
+    public void Sample8() {
+        
+        List<String> studentsNameList = new ArrayList<>();
+        String[] arr = {"tarou","jirou"};
+        studentsNameList.addAll(Arrays.asList(arr));   
+        
+        students.stream()
+                //stundentNameListをとることができる
+                .filter(s -> studentsNameList.contains(s.getName()))
+                .forEach((s) -> {
+                    System.out.println(s.getName());
+                });
+    }
+    
+    /**
+     *  scopeについて その2
+     */
+    public void Sample9() {
+        
+        List<String> studentsNameList = new ArrayList<>();
+        String[] arr = {"tarou","jirou"};
+        studentsNameList.addAll(Arrays.asList(arr));   
+        
+        students.stream()
+                .forEach((s) -> {
+                    if (studentsNameList.contains(s.getName())) {
+                        System.out.println(s.getName());
+                    }
+                });
+    }
+
+    
+    /**
+     *  scopeについて その3
+     */
+    public void Sample10() {
+    
+        List<String> studentsNameList = new ArrayList<>();
+        String[] arr = {"tarou","jirou"};
+        studentsNameList.addAll(Arrays.asList(arr));   
+        
+        List<Student> students2 = new ArrayList<>();
+        students.stream()
+                .forEach((s) -> {
+                    if (studentsNameList.contains(s.getName())) {
+                        students2.add(s);
+                    }
+                });
+        
+        students2.stream().forEach(s -> System.out.println(s.getName()));
     }
 
 }

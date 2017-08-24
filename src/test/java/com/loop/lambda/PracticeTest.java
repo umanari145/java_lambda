@@ -66,5 +66,35 @@ public class PracticeTest {
         Practice instance = new Practice();
         instance.Sample7();
     }
-
+    
+    /**
+     * Test of Sample5 method, of class Practice.
+     */
+    @Test
+    public void testSample8() {
+        System.out.println("Sample8");
+        Practice instance = new Practice();
+        instance.Sample8();
+    }
+    
+    
+    /**
+     * Test of Sample5 method, of class Practice.
+     */
+    @Test
+    public void testSample9() {
+        System.out.println("Sample9");
+        Practice instance = new Practice();
+        instance.Sample9();
+    }
+    
+    /**
+     * Test of Sample5 method, of class Practice.
+     */
+    @Test
+    public void testSample10() {
+        System.out.println("Sample10");
+        Practice instance = new Practice();
+        instance.Sample10();
+    }
 }
